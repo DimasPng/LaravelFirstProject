@@ -23,10 +23,10 @@ Route::get('contacts', "App\\Http\\Controllers\\ContactsController@index");
 
 Route::get('about', "App\\Http\\Controllers\\AboutController@index");
 
-Route::get('price', "App\\Http\\Controllers\\Price@index");
+Route::get('price', "App\\Http\\Controllers\\PriceController@index");
 
-Route::get('items', "App\\Http\\Controllers\\Items@index");
+Route::get('items', "App\\Http\\Controllers\\ItemsController@index");
 
 Route::get('cart', "App\\Http\\Controllers\\CartController@index");
 
-Route::get('policy', 'App\\Http\\Controllers\\Policy@index');
+Route::get('policy', 'App\\Http\\Controllers\\PolicyController@index');

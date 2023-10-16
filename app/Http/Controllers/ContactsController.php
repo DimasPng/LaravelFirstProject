@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class ContactsController extends Controller
 {
     public function index() {
-        $post = Contact::find(1);
-        dd($post);
+        $contact = Contact::find(1);
+        dump($contact->address);
+        dump($contact->numbers);
+        dd($contact);
     }
 }

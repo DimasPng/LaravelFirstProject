@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class AboutController extends Controller
 {
     public function index() {
-        $post = About::find(1);
-        dd($post);
+        $about = About::find(1);
+        dump($about->about);
+        dump($about->author);
+        dd($about);
     }
 }

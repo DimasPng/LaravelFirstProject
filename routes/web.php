@@ -28,3 +28,5 @@ Route::get('price', "App\\Http\\Controllers\\Price@index");
 Route::get('items', "App\\Http\\Controllers\\Items@index");
 
 Route::get('cart', "App\\Http\\Controllers\\Cart@index");
+
+Route::get('policy', 'App\\Http\\Controllers\\Policy@index');

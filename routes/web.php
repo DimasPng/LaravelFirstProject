@@ -19,14 +19,14 @@ Route::get('/', function () {
 
 Route::get('mypage', "App\\Http\\Controllers\\MyPlaceController@index");
 
-Route::get('contacts', "App\\Http\\Controllers\\Contacts@index");
+Route::get('contacts', "App\\Http\\Controllers\\ContactsController@index");
 
-Route::get('about', "App\\Http\\Controllers\\About@index");
+Route::get('about', "App\\Http\\Controllers\\AboutController@index");
 
 Route::get('price', "App\\Http\\Controllers\\Price@index");
 
 Route::get('items', "App\\Http\\Controllers\\Items@index");
 
-Route::get('cart', "App\\Http\\Controllers\\Cart@index");
+Route::get('cart', "App\\Http\\Controllers\\CartController@index");
 
 Route::get('policy', 'App\\Http\\Controllers\\Policy@index');

@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 
-class About extends Controller
+class CartController extends Controller
 {
     public function index() {
-        return 'About page';
+        return 'CartController';
     }
 }

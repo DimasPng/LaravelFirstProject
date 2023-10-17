@@ -37,4 +37,4 @@ Route::get('posts/update', 'App\\Http\\Controllers\\PostsController@update');
 Route::get('posts/delete', 'App\\Http\\Controllers\\PostsController@delete');
 Route::get('posts/restore', 'App\\Http\\Controllers\\PostsController@restore');
 Route::get('posts/first-or-create', 'App\\Http\\Controllers\\PostsController@firstOrCreate');
-Route::get('posts/update-or-create', 'App\\Http\\Controllers\\PostController@updateOrCreate');
+Route::get('posts/update-or-create', 'App\\Http\\Controllers\\PostsController@updateOrCreate');

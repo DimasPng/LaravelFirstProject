@@ -54,7 +54,38 @@ class PostsController extends Controller
         $post->restore();
     }
 
+    public function firstOrCreate() {
+        $post = [
+            "title"=>"Another article 2",
+            "text"=>"Some intresting text 2",
+            "image"=>"image 541",
+            "likes"=>32,
+            "is_published"=>0,
+        ];
 
+       Post::firstOrCreate([
+           "title"=>"Another article 5"
+        ], [
+           "title"=>"Another article 5",
+           "text"=>"Some intresting text 2",
+           "image"=>"image 541",
+           "likes"=>32,
+           "is_published"=>0,
+       ]);
 
+    }
+
+    public function updateOrCreate() {
+     Post::updateOrCreate(
+         ['text'=>'Update4543'], [
+             'title'=>'Update66666',
+             'text'=>'Update6666',
+             'image' => 'default_image.jpg',
+             "likes"=>32,
+
+           "is_published"=>0,
+         ]
+     );
+    }
 
 }

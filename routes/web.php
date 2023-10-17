@@ -33,3 +33,5 @@ Route::get('policy', 'App\\Http\\Controllers\\PolicyController@index');
 
 Route::get('posts', 'App\\Http\\Controllers\\PostsController@index');
 Route::get('posts/create', 'App\\Http\\Controllers\\PostsController@create');
+Route::get('posts/update', 'App\\Http\\Controllers\\PostsController@update');
+Route::get('posts/delete', 'App\\Http\\Controllers\\PostsController@delete');

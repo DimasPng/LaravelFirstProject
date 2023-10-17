@@ -19,6 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('likes');
             $table->boolean('is_published');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

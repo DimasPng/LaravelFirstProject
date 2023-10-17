@@ -35,3 +35,6 @@ Route::get('posts', 'App\\Http\\Controllers\\PostsController@index');
 Route::get('posts/create', 'App\\Http\\Controllers\\PostsController@create');
 Route::get('posts/update', 'App\\Http\\Controllers\\PostsController@update');
 Route::get('posts/delete', 'App\\Http\\Controllers\\PostsController@delete');
+Route::get('posts/restore', 'App\\Http\\Controllers\\PostsController@restore');
+Route::get('posts/first-or-create', 'App\\Http\\Controllers\\PostsController@firstOrCreate');
+Route::get('posts/update-or-create', 'App\\Http\\Controllers\\PostController@updateOrCreate');

@@ -45,7 +45,16 @@ class PostsController extends Controller
     }
 
     public function delete() {
-        $post = Post::find(6);
+        $post = Post::find(2);
         $post->delete();
     }
+
+    public function restore() {
+        $post = Post::withTrashed()->find(2);
+        $post->restore();
+    }
+
+
+
+
 }

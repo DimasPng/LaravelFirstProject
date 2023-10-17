@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('mypage', "App\\Http\\Controllers\\MyPlaceController@index");
+Route::get('mypage', "App\\Http\\Controllers\\PostsController@index");
 
 Route::get('contacts', "App\\Http\\Controllers\\ContactsController@index");
 
@@ -30,3 +30,6 @@ Route::get('items', "App\\Http\\Controllers\\ItemsController@index");
 Route::get('cart', "App\\Http\\Controllers\\CartController@index");
 
 Route::get('policy', 'App\\Http\\Controllers\\PolicyController@index');
+
+Route::get('posts', 'App\\Http\\Controllers\\PostsController@index');
+Route::get('posts/create', 'App\\Http\\Controllers\\PostsController@create');

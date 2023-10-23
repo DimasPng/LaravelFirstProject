@@ -9,8 +9,6 @@ class ItemsController extends Controller
 {
     public function index() {
         $items = Item::find(1);
-        dump($items->name);
-        dump($items->description);
-        dd($items);
+        return view('item');
     }
 }

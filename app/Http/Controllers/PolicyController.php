@@ -9,9 +9,6 @@ class PolicyController extends Controller
 {
     public function index() {
         $policy = Policy::find(1);
-        dump($policy->title);
-        dump($policy->description);
-        dump($policy->main_text);
-        dd($policy);
+        return view('policy');
     }
 }

@@ -19,19 +19,21 @@ Route::get('/', function () {
 
 Route::get('mypage', "App\\Http\\Controllers\\PostsController@index");
 
-Route::get('contacts', "App\\Http\\Controllers\\ContactsController@index");
+Route::get('contacts', "App\\Http\\Controllers\\ContactsController@index")->name('contact.index');
 
-Route::get('about', "App\\Http\\Controllers\\AboutController@index");
+Route::get('about', "App\\Http\\Controllers\\AboutController@index")->name('about.index');
 
 Route::get('price', "App\\Http\\Controllers\\PriceController@index");
 
-Route::get('items', "App\\Http\\Controllers\\ItemsController@index");
+Route::get('items', "App\\Http\\Controllers\\ItemsController@index")->name('item.index');
 
 Route::get('cart', "App\\Http\\Controllers\\CartController@index");
 
-Route::get('policy', 'App\\Http\\Controllers\\PolicyController@index');
+Route::get('policy', 'App\\Http\\Controllers\\PolicyController@index')->name('policy.index');
 
-Route::get('posts', 'App\\Http\\Controllers\\PostsController@index');
+Route::get('main', 'App\\Http\\Controllers\\MainController@index')->name('main.index');
+
+Route::get('posts', 'App\\Http\\Controllers\\PostsController@index')->name('post.index');
 Route::get('posts/create', 'App\\Http\\Controllers\\PostsController@create');
 Route::get('posts/update', 'App\\Http\\Controllers\\PostsController@update');
 Route::get('posts/delete', 'App\\Http\\Controllers\\PostsController@delete');

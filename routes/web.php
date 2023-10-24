@@ -35,6 +35,7 @@ Route::get('main', 'App\\Http\\Controllers\\MainController@index')->name('main.i
 
 Route::get('posts', 'App\\Http\\Controllers\\PostsController@index')->name('post.index');
 Route::get('posts/create', 'App\\Http\\Controllers\\PostsController@create');
+Route::post('posts', 'App\\Http\\Controllers\\PostsController@store')->name('post.store');
 Route::get('posts/update', 'App\\Http\\Controllers\\PostsController@update');
 Route::get('posts/delete', 'App\\Http\\Controllers\\PostsController@delete');
 Route::get('posts/restore', 'App\\Http\\Controllers\\PostsController@restore');

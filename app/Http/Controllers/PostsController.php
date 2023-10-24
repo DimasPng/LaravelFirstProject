@@ -14,27 +14,16 @@ class PostsController extends Controller
     }
 
     public function create() {
-     $posts = [
-         [
-             "title"=>"Another article 1",
-             "text"=>"Some intresting text 1",
-             "image"=>"image 222",
-             "likes"=>55,
-             "is_published"=>1,
-         ],
-         [
-             "title"=>"Another article 2",
-             "text"=>"Some intresting text 2",
-             "image"=>"image 541",
-             "likes"=>32,
-             "is_published"=>0,
-         ]
-     ];
+        return view('posts.create');
+    }
 
-     foreach ($posts as $post) {
-         Post::create($post);
-     }
-     dd('created');
+    public function store() {
+        $data = request()->validate([
+            'title'=>'string',
+            'text'=>'string',
+            'image'=>'string'
+        ]);
+        dd($data);
     }
 
     public function update() {

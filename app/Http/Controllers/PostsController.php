@@ -36,6 +36,11 @@ class PostsController extends Controller
         return view('posts.edit', compact('post'));
     }
 
+    public function destroy(Post $post) {
+        $post->delete();
+        return redirect()->route('post.index');
+    }
+
     public function update(Post $post) {
         $data = request()->validate([
             'title'=>'string',

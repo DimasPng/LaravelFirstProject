@@ -6,16 +6,16 @@
             @method('patch')
             <div class="form-group">
                 <label for="exampleInputEmail1">Title</label>
-                <input name="title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <input value="{{$post->title}}" name="title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Text</label>
-                <input name="text" type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <input value="{{$post->text}}" name="text" type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Image</label>
-                <input name="image" type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <input value="{{$post->image}}" name="image" type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

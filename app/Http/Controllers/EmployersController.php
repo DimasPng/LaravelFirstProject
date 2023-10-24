@@ -28,5 +28,28 @@ class EmployersController extends Controller
         return redirect()->route('employers.index');
     }
 
+    public function show(Employers $employee) {
+        return view('employers.show', compact('employee'));
+    }
+
+    public function edit(Employers $employee) {
+        return view('employers.edit', compact('employee'));
+    }
+
+    public function update(Employers $employee) {
+        $data = request()->validate([
+            "name"=>"string",
+            "surname"=>"string",
+            "email"=>"string"
+        ]);
+        $employee->update($data);
+        return redirect()->route('employers.index');
+    }
+
+    public function destroy(Employers $employee) {
+        $employee->delete();
+        return redirect()->route('employers.index');
+    }
+
 
 }

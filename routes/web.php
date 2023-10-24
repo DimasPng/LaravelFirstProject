@@ -18,20 +18,20 @@ Route::get('/', function () {
 });
 
 Route::get('contacts', "App\\Http\\Controllers\\ContactsController@index")->name('contact.index');
-
 Route::get('about', "App\\Http\\Controllers\\AboutController@index")->name('about.index');
-
 Route::get('price', "App\\Http\\Controllers\\PriceController@index");
 
 Route::get('employers', "App\\Http\\Controllers\\EmployersController@index")->name('employers.index');
 Route::get('employers/create', "App\\Http\\Controllers\\EmployersController@create")->name('employers.create');
 Route::post('employers', "App\\Http\\Controllers\\EmployersController@store")->name('employers.store');
+Route::get('employers/{employee}', "App\\Http\\Controllers\\EmployersController@show")->name('employers.show');
+Route::get('employers/{employee}/edit', "App\\Http\\Controllers\\EmployersController@edit")->name('employers.edit');
+Route::patch('employers/{employee}', "App\\Http\\Controllers\\EmployersController@update")->name('employers.update');
+Route::delete('employers/{employee}', "App\\Http\\Controllers\\EmployersController@destroy")->name('employers.destroy');
+
 Route::get('items', "App\\Http\\Controllers\\ItemsController@index")->name('item.index');
-
 Route::get('cart', "App\\Http\\Controllers\\CartController@index");
-
 Route::get('policy', 'App\\Http\\Controllers\\PolicyController@index')->name('policy.index');
-
 Route::get('main', 'App\\Http\\Controllers\\MainController@index')->name('main.index');
 
 Route::get('posts', 'App\\Http\\Controllers\\PostsController@index')->name('post.index');

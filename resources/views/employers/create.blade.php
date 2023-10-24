@@ -15,5 +15,6 @@
             <input name="email" type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter your email">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="{{route('employers.index')}}"  class="btn btn-secondary">Back</a>
     </form>
 @endsection

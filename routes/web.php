@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('mypage', "App\\Http\\Controllers\\PostsController@index");
+Route::get('posts', "App\\Http\\Controllers\\PostsController@index");
 
 Route::get('contacts', "App\\Http\\Controllers\\ContactsController@index")->name('contact.index');
 

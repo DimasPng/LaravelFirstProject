@@ -17,8 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('posts', "App\\Http\\Controllers\\PostsController@index");
-
 Route::get('contacts', "App\\Http\\Controllers\\ContactsController@index")->name('contact.index');
 
 Route::get('about', "App\\Http\\Controllers\\AboutController@index")->name('about.index');
@@ -34,9 +32,11 @@ Route::get('policy', 'App\\Http\\Controllers\\PolicyController@index')->name('po
 Route::get('main', 'App\\Http\\Controllers\\MainController@index')->name('main.index');
 
 Route::get('posts', 'App\\Http\\Controllers\\PostsController@index')->name('post.index');
-Route::get('posts/create', 'App\\Http\\Controllers\\PostsController@create');
+Route::get('posts/create', 'App\\Http\\Controllers\\PostsController@create')->name('post.create');
 Route::post('posts', 'App\\Http\\Controllers\\PostsController@store')->name('post.store');
-Route::get('posts/update', 'App\\Http\\Controllers\\PostsController@update');
+Route::get('/posts/{post}', 'App\\Http\\Controllers\\PostsController@show')->name('post.show');
+Route::get('/posts/{post}/edit', 'App\\Http\\Controllers\\PostsController@edit')->name('post.edit');
+Route::patch('/posts/{post}', 'App\\Http\\Controllers\\PostsController@update')->name('post.update');
 Route::get('posts/delete', 'App\\Http\\Controllers\\PostsController@delete');
 Route::get('posts/restore', 'App\\Http\\Controllers\\PostsController@restore');
 Route::get('posts/first-or-create', 'App\\Http\\Controllers\\PostsController@firstOrCreate');

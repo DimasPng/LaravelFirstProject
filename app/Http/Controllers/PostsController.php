@@ -23,12 +23,27 @@ class PostsController extends Controller
             'text'=>'string',
             'image'=>'string'
         ]);
-        dd($data);
+        Post::created($data);
+        return redirect()->route('post.index');
     }
 
-    public function update() {
-        $post = Post::find(6);
-        $post->update(["title" => 'updated', 'likes' => 1000]);
+    public function show(Post $post) {
+
+        return view('posts.show', compact('post'));
+    }
+
+    public function edit(Post $post) {
+        return view('posts.edit', compact('post'));
+    }
+
+    public function update(Post $post) {
+        $data = request()->validate([
+            'title'=>'string',
+            'content'=>'string',
+            'image'=>'string'
+        ]);
+        $post->update($data);
+        return redirect()->route('post.show', $post->id);
     }
 
     public function delete() {

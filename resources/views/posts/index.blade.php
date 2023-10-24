@@ -1,11 +1,12 @@
 @extends('layouts.main')
 @section('content')
+    <a href="{{route('post.create')}}">Добавить пост</a>
     @foreach($posts as $post)
-        <div>
+        <a href="{{route('post.show', $post->id)}}">
             {{ $post->title }}
             {{ $post->text }}
             {{ $post->likes }}
-        </div>
+        </a>
         <br>
     @endforeach
 @endsection
